@@ -171,14 +171,14 @@ Open http://localhost:5678 in your browser.
 To stop the n8n container, run:
 
 ```bash
-docker-compose down
+docker compose down
 ```
 This command stops and removes the container.
 
 To restart the n8n container, run:
 
 ```bash
-docker-compose up -d
+docker compose up -d
 ```
 
 This command starts the container in detached mode (in the background).
