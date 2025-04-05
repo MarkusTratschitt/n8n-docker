@@ -2,7 +2,8 @@
 
 This repository contains a simple, beginner-friendly setup to run [n8n](https://n8n.io/) — a powerful workflow automation tool — locally using Docker.
 
-> ✅ Ideal for developers or learners who want to get started with workflow automation  
+> ✅ Ideal for developers or learners who want to get started with workflow automation 
+
 > 🔗 GitHub Repository: https://github.com/MarkusTratschitt/n8n-docker
 
 ---
@@ -33,9 +34,13 @@ Open the terminal and run:
 ---
 
 ### Step 2 – Install Git:
+
+If you already have Homebrew installed, you can install Git by running:
+
 ```bash
 brew install git
 ```
+
 ---
 
 ### Step 3 – Verify Installation:
@@ -43,9 +48,11 @@ brew install git
 ```bash
 git --version
 ```
+
 If Git is installed correctly, you should see the version number.
 
 Example: git version 2.44.0
+
 ---
 
 ### Step 4 – Configure Git (recommended):
@@ -54,7 +61,9 @@ Example: git version 2.44.0
 git config --global user.name "Your Name"
 git config --global user.email "you@example.com"
 ```
+
 This step is optional but recommended for better collaboration and version control.
+
 ---
 
 ### 🔐 Do I need a GitHub account to clone this?
@@ -72,6 +81,7 @@ We recommend creating a development folder on your machine, for example:
 └── Repositories
     └── n8n-docker ← project will live here
 ```
+
 On macOS or Linux:
 
 ```bash
@@ -92,7 +102,9 @@ cd ~/DEV/Repositories
 git clone https://github.com/MarkusTratschitt/n8n-docker.git
 cd n8n-docker
 ```
-This will create a new folder called `n8n-docker` in your `~/DEV/Repositories` directory.
+
+This command clones the repository into a new folder called `n8n-docker` in your `~/DEV/Repositories` directory.
+If you want to clone it into a different folder, replace `~/DEV/Repositories` with your desired path.
 
 ---
 
@@ -101,7 +113,9 @@ This will create a new folder called `n8n-docker` in your `~/DEV/Repositories` d
 ```bash
 code .
 ```
+
 This command opens the current directory in Visual Studio Code.
+
 If you don't have the `code` command available, you can enable it in VS Code by going to the Command Palette (Cmd + Shift + P) and typing "Shell Command: Install 'code' command in PATH".
 
 💡 If code is not found, open VS Code manually and select File → Open Folder…
@@ -109,6 +123,7 @@ If you don't have the `code` command available, you can enable it in VS Code by 
 ---
 
 ### 3. Run the Setup Script
+
 In the terminal inside VS Code, run:
 
 ```bash
@@ -128,7 +143,9 @@ What this does:
 ```bash
 chmod +x init.sh
 ```
+
 This command makes the script executable.
+
 ---
 
 ### 4. Log In to n8n
@@ -157,11 +174,13 @@ To stop the n8n container, run:
 docker-compose down
 ```
 This command stops and removes the container.
+
 To restart the n8n container, run:
 
 ```bash
 docker-compose up -d
 ```
+
 This command starts the container in detached mode (in the background).
 
 ---
