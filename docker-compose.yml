@@ -1,13 +1,30 @@
-version: '3.8'
+# Docker Compose configuration for running n8n (workflow automation tool)
+# This file sets up a single n8n service accessible via http://localhost:5678
+
+# Note: 'version' is no longer required in newer Compose versions, so it's commented out.
+# version: '3.8'
 
 services:
   n8n:
+    # Use the official n8n image from Docker Hub
     image: n8nio/n8n
+
+    # Name the container "n8n" for easier reference
     container_name: n8n
+
+    # Map port 5678 of the host to port 5678 in the container
+    # Allows access to n8n in the browser via http://localhost:5678
     ports:
       - "5678:5678"
+
+    # Mount the local 'data' folder to persist workflows, credentials, etc.
     volumes:
       - ./data:/home/node/.n8n
+
+    # Load environment variables from the .env file in the same directory
     env_file:
       - .env
+
+    # Automatically restart the container unless it's explicitly stopped
     restart: unless-stopped
+
