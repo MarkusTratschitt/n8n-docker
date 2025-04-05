@@ -140,8 +140,11 @@ Open http://localhost:5678 in your browser.
 - Password: supersecret
 
 > ⚠️ **Important**: Change the password in the `.env` file for security reasons.
+
 > ⚠️ **Important**: This setup is for local development only. Do not use it in production without proper security measures.
+
 > ⚠️ **Important**: The default password is not secure. Change it in the `.env` file.
+
 > ⚠️ **Important**: The default username is not secure. Change it in the `.env` file.
 
 ---
